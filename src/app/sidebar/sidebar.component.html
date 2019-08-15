@@ -1,0 +1,113 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="/dashboard">
+      <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fab fa-fw fa-audible"></i>
+      </div>
+      <div class="sidebar-brand-text mx-3">Marker<sup>2</sup></div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/dashboard">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      Admissions
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdmissions" aria-expanded="true" aria-controls="collapseAdmissions">
+        <i class="fas fa-fw fa-book"></i>
+        <span>Admissions</span>
+      </a>
+      <div id="collapseAdmissions" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Operations:</h6>
+          <a class="collapse-item" routerLink="#">Search</a>
+          <a class="collapse-item" routerLink="#">View Admissions</a>
+          <a class="collapse-item" routerLink="#">New Admission</a>
+          <a class="collapse-item" [routerLink]="[{ outlets: { homecontent: ['admissionUpload'] } }]">Bulk Admissions</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Nav Item - Certificates Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCerts" aria-expanded="true" aria-controls="collapseCerts">
+          <i class="fas fa-fw fa-award"></i>
+        <span>Certificates</span>
+      </a>
+      <div id="collapseCerts" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Operations:</h6>
+          <a class="collapse-item" routerLink="#">Study Ceritifcate</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      Fee Management
+    </div>
+
+ <!-- Nav Item - Certificates Collapse Menu -->
+ <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFee" aria-expanded="true" aria-controls="collapseFee">
+        <i class="fas fa-fw fa-rupee-sign"></i>
+      <span>Fee Payments</span>
+    </a>
+    <div id="collapseFee" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">Operations:</h6>
+        <a class="collapse-item" routerLink="#">Pay Fee</a>
+        <a class="collapse-item" routerLink="#">View Fee</a>
+        <a class="collapse-item" routerLink="#">Setup Fee</a>
+      </div>
+    </div>
+  </li>
+
+  
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Expense Management
+      </div>
+  
+   <!-- Nav Item - Certificates Collapse Menu -->
+   <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseExpense" aria-expanded="true" aria-controls="collapseExpense">
+          <i class="fas fa-fw fa-balance-scale-left"></i>
+        <span>Expense</span>
+      </a>
+      <div id="collapseExpense" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Operations:</h6>
+          <a class="collapse-item" routerLink="#">View Expense</a>
+          <a class="collapse-item" routerLink="#">Add Expense</a>
+        </div>
+      </div>
+    </li>
+  
+  
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+  
+
+  </ul>
+  <!-- End of Sidebar -->
