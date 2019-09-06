@@ -1,5 +1,47 @@
 <div class="container-fluid">
-    <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Welcome! Upload Admission Details</h1>
+  <!-- Page Heading -->
+
+  <h1 class="h3 mb-2 text-gray-800">Upload Admission Details</h1>
+  <div class="card shadow mb-4">
+    <p-fileUpload name="myfile[]" customUpload="true" (onUpload)="onUpload($event)"
+      (uploadHandler)="uploadAdmissions($event)" accept=".csv">
+      <ng-template pTemplate="content">
+        <ul *ngIf="fileToUpload">
+          <li>{{fileToUpload.name}} - {{fileToUpload.size}} bytes</li>
+        </ul>
+      </ng-template>
+    </p-fileUpload>
   </div>
-  <!-- /.container-fluid -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Preview</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <p-table [columns]="cols" [value]="uploadResponse" [scrollable]="true" scrollHeight="400px">
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th *ngFor="let col of columns">
+                {{col.header}}
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+              <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+      <div class="mt-4">
+        <button type="button" class="btn btn-primary float-right" (click)="confirmSave()">Confirm</button>
+        <button type="button" class="btn btn-secondary float-right mr-2" (click) = "confirmCancel()">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- /.container-fluid -->
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>

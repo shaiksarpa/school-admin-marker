@@ -14,6 +14,12 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdmissionUploadComponent } from './admission/admission-upload/admission-upload.component';
 import { AuthGuardService } from './_services/auth/authguard.service';
+import { TableModule } from 'primeng/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FileUploadModule } from 'primeng/fileupload';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
+
 
 @NgModule({
   declarations: [
@@ -30,9 +36,13 @@ import { AuthGuardService } from './_services/auth/authguard.service';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    TableModule,
+    BrowserAnimationsModule,
+    FileUploadModule,
+    ConfirmDialogModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }, AuthGuardService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }, AuthGuardService, ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

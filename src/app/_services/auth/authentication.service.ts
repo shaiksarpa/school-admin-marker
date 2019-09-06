@@ -15,7 +15,6 @@ export class AuthenticationService {
         .subscribe(response => {
             this.authenticated = true;
             this.authTokenService.save(response['token']);
-            console.log(response);
             return callback && callback();
         }, erorr => {
             this.authenticated = false;

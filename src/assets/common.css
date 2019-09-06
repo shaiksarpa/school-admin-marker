@@ -11115,7 +11115,8 @@
   
   .sidebar {
     width: 6.5rem;
-    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
   }
   
   .sidebar .nav-item {
@@ -11641,7 +11642,7 @@
   }
   
   .bg-login-image {
-    background: url("./images/undraw_progress_tracking_7hvk.svg");
+    background: url("./images/SaiSreeLogo.jpg");
     background-position: center;
     background-size: cover;
   }
